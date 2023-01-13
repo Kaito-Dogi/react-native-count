@@ -1,13 +1,13 @@
-import { StatusBar } from 'expo-status-bar'
-import { Button, StyleSheet, Text, View } from 'react-native'
-import { useState } from 'react'
+import { StatusBar } from 'expo-status-bar';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
 
 export default function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   const handleClick = () => {
-    setCount((prevCount: number) => prevCount + 1)
-  }
+    setCount((prevCount: number) => prevCount + 1);
+  };
 
   return (
     <View style={styles.container}>
@@ -15,7 +15,7 @@ export default function App() {
       <Button title="Click!" onPress={handleClick}></Button>
       <StatusBar style="auto" />
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-})
+});
