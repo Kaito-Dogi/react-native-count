@@ -1,10 +1,10 @@
 module.exports = {
-  'env': {
-    'es2021': true,
-    'node': true,
-    'jest': true,
+  env: {
+    es2021: true,
+    node: true,
+    jest: true,
   },
-  'extends': [
+  extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
@@ -12,50 +12,41 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
-  'overrides': [],
-  'parser': '@typescript-eslint/parser',
-  'parserOptions': {
-    'project': './tsconfig.json',
-    'ecmaVersion': 'latest',
-    'sourceType': 'module',
+  overrides: [],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  'plugins': [
-    'react',
-    'react-hooks',
-    '@typescript-eslint',
-  ],
-  'rules': {
-    'indent': [
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
+  rules: {
+    indent: [
       'error',
       2,
       {
-        'SwitchCase': 1,
+        SwitchCase: 1,
       },
     ],
-    'linebreak-style': [
-      'error',
-      'unix'
-    ],
-    'quotes': [
+    'linebreak-style': ['error', 'unix'],
+    quotes: [
       'error',
       'single',
       {
-        'avoidEscape': true,
+        avoidEscape: true,
       },
     ],
-    'semi': [
-      'error',
-      'always',
-    ],
+    semi: ['error', 'always'],
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     'react/display-name': 'off',
     'react/prop-types': 'off',
+    'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
   },
-  'settings': {
-    'react': {
-      'version': 'detect',
+  settings: {
+    react: {
+      version: 'detect',
     },
   },
 };
