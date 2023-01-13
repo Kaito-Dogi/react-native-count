@@ -33,11 +33,9 @@
   },
   "private": true,
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "eslint --ext .tsx --ext .ts src/ --fix"
-    ],
-    "./src/**": [
-      "prettier --write ."
+    "lint and format": [
+      "eslint --fix --ext .jsx,.js,.tsx,.ts .",
+      "prettier --write **/*.{js,jsx,ts,tsx,json}"
     ]
   },
   "husky": {
